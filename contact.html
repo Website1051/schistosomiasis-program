@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+    <section class="contact-container">
+        <h2>Get in Touch</h2>
+        <p>Feel free to reach out to us with any questions, concerns, or feedback.</p>
+
+        <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <p><strong>Email:</strong> <a href="mailto:alycimdenga@gmail.com">alycimdenga@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+255753028122">0753 028 122</a></p>
+                <p><strong>Location:</strong> Mwanza, Tanzania</p>
+
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><img src="images/a.JPG" alt="Facebook"></a>
+                    <a href="#"><img src="images/c.PNG" alt="Twitter"></a>
+                    <a href="#"><img src="images/b.JPG" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form action="https://formspree.io/f/movjlgkv?embedded=true" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="success-message" style="display: none;
+                color: green;">
+                <h3>Thank you! Your message has been sent succesfully.</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map">
+            <h3>Find Us on the Map</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.21739194799!2d32.9162875!3d-2.5164309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c4c7d3b3d6e41b%3A0x2bce5e3d6adf1b8!2sMwanza Bugando!5e0!3m2!1sen!2stz!4v1712345678901" 
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <script>
+document.getElementById("contact-form").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    let formData = new FormData(this);
+
+    try {
+        let response = await fetch("https://formspree.io/f/movjlgkv", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            this.style.display = "none"; // Hides the form
+            document.getElementById("success-message").style.display = "block"; // Shows success message
+        } else {
+            alert("There was an error submitting the form. Please try again.");
+        }
+    } catch (error) {
+        alert("There was an error submitting the form.");
+    }
+});
+</script>
+
+
+</body>
+</html>

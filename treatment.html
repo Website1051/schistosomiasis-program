@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment of Schistosomiasis</title>
+    <link rel="stylesheet" href="treatment.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Schistosomiasis Control</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">ℹ️ About</a></li>
+            <li><a href="causes.html">⚠️ Causes</a></li>
+            <li><a href="symptoms.html">🤒 Symptoms</a></li>
+            <li><a href="prevention.html">🛡️ Prevention</a></li>
+            <li><a href="treatment.html" class="active">💊 Treatment</a></li>
+            <li><a href="resources.html">📚 Resources</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Treatment of Schistosomiasis</h1>
+        </header>
+
+        <section class="content">
+            <h2>Effective Treatments</h2>
+            <p>Schistosomiasis is a treatable disease, and early diagnosis significantly improves recovery rates. The primary treatment involves **antiparasitic medication**, supportive therapy, and community-based interventions.</p>
+
+            <h2>Medications Used in Treatment</h2>
+            <p>The **main drug** used to treat schistosomiasis is:</p>
+            <ul>
+                <li>💊 **Praziquantel** - The most effective antiparasitic drug that kills schistosome worms.</li>
+                <li>💊 **Oxamniquine** - An alternative medication used in specific regions.</li>
+                <li>💊 **Artemisinin-based therapies** - Sometimes used in combination for better effectiveness.</li>
+            </ul>
+
+            <img src="images/i.jpg" alt="Doctors providing treatment for schistosomiasis" class="image">
+
+            <h2>How Treatment Works</h2>
+            <p>Treatment for schistosomiasis follows a **step-by-step approach**:</p>
+            <div class="steps">
+                <div class="step">
+                    <h3>1️⃣ Diagnosis</h3>
+                    <p>Blood, urine, and stool tests confirm the presence of the parasite.</p>
+                </div>
+                <div class="step">
+                    <h3>2️⃣ Medication</h3>
+                    <p>Praziquantel is administered based on the severity of infection.</p>
+                </div>
+                <div class="step">
+                    <h3>3️⃣ Follow-up</h3>
+                    <p>Patients are monitored to ensure full recovery.</p>
+                </div>
+                <div class="step">
+                    <h3>4️⃣ Prevention</h3>
+                    <p>Community-wide treatment programs help prevent reinfection.</p>
+                </div>
+            </div>
+
+            <h2>Community-Based Treatment Programs</h2>
+            <p>To effectively control schistosomiasis, health organizations implement:</p>
+            <ul>
+                <li>🏥 **Mass Drug Administration (MDA)** programs in endemic regions.</li>
+                <li>🔬 **Free screenings and diagnostic tests** in local health centers.</li>
+                <li>📢 **Awareness campaigns** to educate communities on symptoms and treatment.</li>
+                <li>💧 **Integration with clean water initiatives** to reduce reinfection.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <button class="faq-question">❓ Can schistosomiasis be cured? ▼</button>
+                <div class="faq-answer">Yes! With proper treatment, schistosomiasis can be completely cured.</div>
+
+                <button class="faq-question">❓ Is treatment safe for children? ▼</button>
+                <div class="faq-answer">Yes, Praziquantel is safe for both adults and children.</div>
+
+                <button class="faq-question">❓ How long does treatment take? ▼</button>
+                <div class="faq-answer">Most cases require a single dose, but follow-up tests may be needed.</div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Community-Based Schistosomiasis Control Program | Designed by Alycia Stans Mdeng'a</p>
+        </footer>
+    </div>
+
+    <script>
+        // FAQ Toggle Script
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", () => {
+                question.nextElementSibling.classList.toggle("show-answer");
+            });
+        });
+    </script>
+
+</body>
+</html>
